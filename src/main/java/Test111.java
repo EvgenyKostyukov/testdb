@@ -18,13 +18,13 @@ public class Test111 {
         try {
             Session session = factory.getCurrentSession();
 
-            Cities cities = new Cities("Moscow", "info-1");
+            Cities cities = new Cities("1", "2-1");
 
             session.beginTransaction();
             session.save(cities);
             session.getTransaction().commit();
 
-
+            System.out.println("DONE!");
         } finally {
             factory.close();
         }
